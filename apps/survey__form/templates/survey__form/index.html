@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form App(Django)</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'survey__form/css/style.css' %}">
+</head>
+<body>
+	<div id="container">
+		<form action="/submission" method="post">
+			{% csrf_token %}
+			<label class="name">Name:</label>
+			<input class="name_input" type="text" name="name">
+			<label class="location">Dojo Location:</label>
+			<select class="location_select" name="locations">
+				<option value="chicago">Chicago</option>
+				<option value="san francisco">San Francisco</option>
+				<option value="los angeles">Los Angeles</option>
+			</select>
+			<label class="language">Favorite Language:</label>
+			<select class="language_select" name="languages">
+				<option value="python">Python</option>
+				<option value="javascript">JavaScript</option>
+				<option value="ruby">Ruby</option>
+				<option value="swift">Swift</option>
+			</select>
+			<label class="comment">Comment (Optional):</label>
+			<textarea class="comment_box" name="comments"></textarea>
+			<input class="submit" type="submit" name="submit" value="Submit">
+			
+		</form>
+	</div>
+
+</body>
+</html>

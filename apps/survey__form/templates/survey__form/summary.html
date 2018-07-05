@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Summary</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'survey__form/css/submission.css' %}">
+</head>
+<body>
+	<h3>Name: {{request.session.name}}</h3>
+	<h3>Location: {{request.session.locations}}</h3>
+	<h3>Language: {{request.session.languages}}</h3>
+	<h3>Comments: {{request.session.comments}}</h3>
+
+</body>
+</html>
